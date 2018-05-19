@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      PUSH NOTIFICATION ONESIGNAL
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="secondary" (click)="updateList()">Actualizar Lista</button>
+  <br>
+  <ion-list>
+    <ion-list-header>
+      USUARIOS SUBSCRITOS
+    </ion-list-header>
+   
+    <ion-item class="text" *ngFor="let user of usuariosList; let i=index ">
+      <button ion-button color="dark" outline large (click)="makeNewNotification(user.userId)">userId {{i}}</button>
+    </ion-item>
+
+  </ion-list>
+  
+</ion-content>
